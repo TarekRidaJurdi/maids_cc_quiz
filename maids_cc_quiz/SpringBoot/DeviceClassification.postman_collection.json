@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "31bb7c5d-49c6-4a2e-8677-0d26b8562e81",
+		"name": "DeviceClassification",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "RetrieveDevices",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/devices/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"devices",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddDevice",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"93939393\",\r\n  \"battery_power\": 3000,\r\n  \"blue\": 1,\r\n  \"clock_speed\": 2.2,\r\n  \"dual_sim\": 1,\r\n  \"fc\": 8,\r\n  \"four_g\": 1,\r\n  \"int_memory\": 64,\r\n  \"m_dep\": 0.3,\r\n  \"mobile_wt\": 150,\r\n  \"n_cores\": 8,\r\n  \"pc\": 6,\r\n  \"px_height\": 1920,\r\n  \"px_width\": 1080,\r\n  \"ram\": 6,\r\n  \"sc_h\": 5,\r\n  \"sc_w\": 3,\r\n  \"talk_time\": 20,\r\n  \"three_g\": 1,\r\n  \"touch_screen\": 1,\r\n  \"wifi\": 1\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/devices",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"devices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeviceID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/devices/93939393",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"devices",
+						"93939393"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PredictPrice",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/predict/88",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"predict",
+						"88"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
